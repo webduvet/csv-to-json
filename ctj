@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var Converter = require('./lib/csv-to-json.js');
+
+var args = process.argv;
+
+args.shift();
+args.shift();
+args.length > 0 || process.exit(1);
+
+var converter = Object.create(Converter.prototype);
+!!args[1] || args.push(null);
+args.push(['name', 'iso-2', 'iso-3','phone']);
+args.push('name');
+conv = Converter.apply(converter, args);
+
+converter.convert(function(err){
+	if(err){
+		console.log("error occured", err);
+	} else {
+		console.log("file converted succesfully");
+	}
+	process.exit(1);
+});
