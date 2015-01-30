@@ -1,0 +1,37 @@
+{
+  "name": "csv-to-json",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/horse/csv-to-json",
+  "author": {
+    "name": "andrej bartko",
+    "email": "andrej.bartko@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/horse/csv-to-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/horse/csv-to-json/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/horse/csv-to-json/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/csv-to-json",
+  "engines": {
+    "node": "0.10.24"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2"
+  },
+  "keywords": []
+}
