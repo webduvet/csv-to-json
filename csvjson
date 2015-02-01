@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var argv = process.argv;
+var args = new Array(5);
+
+argv.shift(); // get rid of node
+argv.shift(); // command name
+
+// args[0] file in
+args.push(argv[0]);
+args.push(argv[1]);
+// args[1] file out
+// args[2] -d delimiter  defaults to ','
+// argc[3] -H selected headers
+// args[4] -k key
+
+
+var delimiter = argv.indexOf('-d');
+
+console.log(delimiter);
+
+if (delimiter + 1 && argv[delimiter + 1]){
+	args.push(argv[delimiter + 1]);
+}
+
+args.push(null);
+
+var key = argv.indexOf('-k');
+
+if (key + 1 && argv[key + 1]){
+	args.push(argv[key + 1]);
+}
+
+args[3] = "ukulele";
+
+console.log(args);
